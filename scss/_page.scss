@@ -1,10 +1,14 @@
 @use 'responsive'as *;
 body {
-  background-color: #211E31 !important; ;
+  background-color: #211E31 !important;
   color: white;
 }
 .header {
   background: rgba(255, 255, 255, 0.1);
+}
+.container {
+
+
 }
 .text-link {
   font-weight: 600;
@@ -19,9 +23,9 @@ body {
 }
 .hero-section {
   position: relative;
-  padding: 80px 0;
+  padding-top: 136px;
   text-align: left;
-  background-color: #211E31 ;
+
   color: white;
 
 }
@@ -95,8 +99,346 @@ body {
 .i_phone {
   position: absolute;
   top: -20%;
+  right: 0;
   @media (max-width: $large-screen) {
     display: none;
   }
+
+}
+
+/*2й блок*/
+.cocktail-section {
+  position: relative;
+  background: url("../img/bg_2.png") calc(50% - 200px)  -4% no-repeat, #211E31;
+  backdrop-filter: blur(100px);
+  border-radius: 12px;
+  padding-top: 136px;
+  padding-bottom: 128px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+
+}
+
+.cocktail-section::after {
+  content: "";
+  position: absolute;
+  right: -13%; /* Смещаем фон за границы */
+  bottom: -20px;
+  width: 370px; /* Задаем размеры фонового изображения */
+  height: 300px;
+  background: url("../img/bg_3.png") no-repeat center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.glow-box-2 {
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+
+
+
+
+  border-radius: 12px;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.55);
+  position: relative;
+
+}
+
+.blur-overlay {
+  position: absolute;
+  width: 100%; /* Размер размытой области */
+  height: 100%;
+  top: 0; /* Подстрой под нужную позицию */
+  left:0;
+  backdrop-filter: blur(4px); /* Размытие фона */
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.1); /* Лёгкая прозрачность */
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.cocktail-text {
+  z-index: 2;
+  position: relative;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  padding-right: 48px!important;
+}
+.cocktail-text h2 {
+  margin-bottom: 0px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0%;
+  text-align: right;
+  color: #fff;
+  text-shadow: 8px 8px 16px  rgba(0, 0, 0, 0.5);
+}
+.cocktail-text span {
+  font-weight: 800;
+  font-size: 48px;
+  color: #f2d762;
+  text-align: right;
+  text-shadow: 8px 8px 16px  rgba(0, 0, 0, 0.5);
+
+}
+.cocktail-text p {
+  margin-top: 36px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: right;
+  color: #fff;
+  text-align: right;
+  text-shadow: 8px 8px 16px  rgba(0, 0, 0, 0.5);
+}
+
+.glow-svg-2 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  top: -34px; /* Позиция свечения */
+  right: 20%;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+
+
+}
+.cocktail-image {
+  min-width: 562px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  @media (max-width: $large-screen) {
+    display: none;
+  }
+
+}
+
+/*3й блок*/
+.cocktail-guide {
+  margin-top: -78px;
+}
+.custom-card-text {
+  padding: 48px;
+  z-index: 2;
+  position: relative;
+
+}
+.custom-card {
+  position: relative;
+}
+.custom-card-left::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  top: 0;
+  width: 300px; /* Задаем размеры фонового изображения */
+  height: 200px;
+  background: url("../img/branch.svg")  right top no-repeat;
+  background-size: contain;
+  z-index: 1;
+
+}
+.custom-card-left::before {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  top: 15%;
+  width: 400px; /* Задаем размеры фонового изображения */
+  height: 300px;
+  background: url("../img/skin_1.svg")  right top  no-repeat;
+  background-size: contain;
+  z-index: 3;
+
+}
+
+.custom-card-right::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  top: 29%;
+  width: 215px;
+  height: 224px;
+  background: url("../img/pineaple.svg")  right top  no-repeat;
+  background-size: contain;
+  z-index: 3;
+
+}
+
+
+.custom-card-right::before {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  bottom: 13%;
+  width: 274px;
+  height: 240px;
+  background: url("../img/pepper.svg")  right top  no-repeat;
+  background-size: contain;
+  z-index: 2;
+
+}
+.extra-bg-right::after {
+
+  content: "";
+  position: absolute;
+  left: 0; /* Смещаем фон за границы */
+  top: 16%;
+  width: 270px;
+  height: 200px;
+  background: url("../img/skin_2.svg")  left top  no-repeat;
+  background-size: contain;
+  z-index: 3;
+
+}
+
+
+.title-h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0%;
+  color: #fff;
+  text-shadow:          10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.text-yellow-2 {
+  font-weight: 700;
+  font-size: 48px;
+  color: #f2d762;
+  text-shadow:          10px 10px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.description-p {
+  margin-top: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #fff;
+  text-shadow:          10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.custom-card img {
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+.glow-svg-3 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  bottom: -41px;
+  right: 12%;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+/*4й блок*/
+.search-section {
+  position: relative;
+  border-radius: 12px;
+  padding-top: 86px;
+  padding-bottom: 28px;
+  text-align: left;
+  margin: auto;
+}
+.glow-box {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  background:url("../img/bg_1.png") right center no-repeat, rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.55);
+  position: relative;
+
+}
+
+.search_1 {
+  height:100%;
+  position: absolute;
+  top: 0;
+  right: 12px;
+  @media (max-width: $large-screen) {
+    display: none;
+  }
+}
+.search-section-text {
+  padding: 128px 0 128px 48px;
+  z-index: 2;
+  position: relative;
+
+}
+
+.search-section::after {
+  content: "";
+  position: absolute;
+  left: 10%  ; /* Смещаем фон за границы */
+  bottom: -150px;
+  width: 370px; /* Задаем размеры фонового изображения */
+  height: 300px;
+  background: url("../img/cherry.png") no-repeat center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.glow-svg-4 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  bottom: 13%;
+  left: -2px;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/*5й блок*/
+.calculator-section {
+  position: relative;
+  border-radius: 12px;
+  padding-top: 23px;
+  padding-bottom: 28px;
+  text-align: right;
+  margin: auto;
+}
+
+.calculator-section-text {
+  margin-left: auto;
+  width: 60%;
+  padding: 108px 48px 108px 0;
+  z-index: 2;
+  position: relative;
+
+}
+.calculator_1 {
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  @media (max-width: $large-screen) {
+    display: none;
+  }
+}
+.glow-svg-5 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  top: -34px; /* Позиция свечения */
+  right: 20%;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 
 }
