@@ -279,6 +279,18 @@ body {
   z-index: 3;
 }
 
+.extra-bg-left::before {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  top: 50%;
+  width: 260px;
+  height: 260px;
+  background: url("../img/limon_1.svg") right top no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
 .custom-card-right::after {
   content: "";
   position: absolute;
@@ -313,6 +325,18 @@ body {
   background: url("../img/skin_2.svg") left top no-repeat;
   background-size: contain;
   z-index: 3;
+}
+
+.extra-bg-right::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Смещаем фон за границы */
+  top: 50%;
+  width: 260px;
+  height: 260px;
+  background: url("../img/limon_2.svg") left top no-repeat;
+  background-size: contain;
+  z-index: 2;
 }
 
 .title-h2 {
@@ -455,6 +479,168 @@ body {
   position: absolute;
   top: -34px; /* Позиция свечения */
   right: 20%;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/*6й блок*/
+.feature {
+  position: relative;
+  margin-top: 100px;
+}
+
+.feature-card-text {
+  padding: 48px;
+  z-index: 2;
+  position: relative;
+}
+
+.feature-card {
+  position: relative;
+}
+
+.feature-card-left::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  top: 0;
+  width: 100%; /* Задаем размеры фонового изображения */
+  height: 100%;
+  background: url("../img/serp.png") right top no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.feature-card-right::before {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/vineglass.png") right bottom no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.feature-card-right::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Смещаем фон за границы */
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/serp2.png") right bottom no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.feature-card img {
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+.feature-card-right img {
+  margin-bottom: 550px;
+}
+
+.glow-svg-6 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  top: -34px;
+  left: 20%;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.feature::after {
+  content: "";
+  position: absolute;
+  left: -13%;
+  bottom: -150px;
+  width: 500px;
+  height: 400px;
+  background: url(../img/bg_3.png) no-repeat center;
+  background-size: contain;
+  z-index: -1;
+  transform: scaleX(-1); /* Зеркальное отражение по горизонтали */
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  right: -13%;
+  bottom: 50%;
+  width: 450px;
+  height: 450px;
+  background: url(../img/lemon_skin.png) no-repeat center;
+  background-size: contain;
+  z-index: -1;
+}
+
+/*footer*/
+.button-link {
+  cursor: pointer;
+}
+
+.footer {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  text-align: center;
+  color: white;
+}
+
+.footer-card-text {
+  padding: 81px 48px 36px;
+  z-index: 2;
+  position: relative;
+}
+
+.footer-app-buttons {
+  margin-bottom: 50px;
+}
+
+.footer-app-buttons img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.glow-box-2 {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+
+.glow-svg-7 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  top: -34px; /* Позиция свечения */
+  left: 50%;
+  transform: translateX(-50%);
+  border: transparent;
+  background-size: contain;
+  pointer-events: none;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.glow-svg-8 {
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  bottom: -43px; /* Позиция свечения */
+  left: 50%;
   transform: translateX(-50%);
   border: transparent;
   background-size: contain;
